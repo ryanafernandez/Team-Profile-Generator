@@ -14,50 +14,75 @@
         <h1>My Team</h1>
     </header>
 
-    <main class="container">
-        <section class="row my-4">
-            <section id="search-card" class="col-12 col-md-4">
-                <h3>Search by City</h3>
-    
-                <form id="search-form" class="col">
-                    <input name="city" id="city" type="text" class="form-input">
-                    <button type="submit" class="btn">Search</button>
-                </form>
-    
-                <div id="search-history">
-                    <ul id="search-list" class="col">
-    
-                    </ul>
-                </div>
-            </section>
-    
-            <section id="results-card" class="col-12 col-md-8 justify-content-around">
-                <div id="current-conditions">
-                    <h3 id="city-date">
-                        <img id="current-icon">
-                    </h3>
-                    <p id="current-temp"></p>
-                    <p id="current-wind"></p>
-                    <p id="current-humidity"></p>
-                </div>
-    
-                <br>
+    <main>
+        
+        <section class="employee-card">
+            <header class="card-header">
+                <h2>My Manager</h2>
+                <h3>Manager</h3>
+            </header>
 
-                <h3 id="future-conditions-header" style="visibility: hidden;">5 Day Forecast:</h3>
-                <div id="future-conditions" class="row justify-content-around">
+            <div class="card-info">
+                <div class="id">
+                    <p>ID: 1</p>
                 </div>
-    
-            </section>
+
+                <div class="email">
+                    <p>Email: manager@mail.com</p>
+                </div>
+
+                <div class="specific-info">
+                    <p>Office Number: 1</p>
+                </div>
+            </div>
         </section>
-        
 
-        
 
-        
+        <section class="employee-card">
+            <header class="card-header">
+                <h2>My Engineer</h2>
+                <h3>Engineer</h3>
+            </header>
+
+            <div class="card-info">
+                <div class="id">
+                    <p>ID: 2</p>
+                </div>
+
+                <div class="email">
+                    <p>Email: engineer@mail.com</p>
+                </div>
+
+                <div class="specific-info">
+                    <p>GitHub: engineerUser</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="employee-card">
+            <header class="card-header">
+                <h2>My Intern</h2>
+                <h3>Intern</h3>
+            </header>
+
+            <div class="card-info">
+                <div class="id">
+                    <p>ID: 3</p>
+                </div>
+
+                <div class="email">
+                    <p>Email: intern@mail.com</p>
+                </div>
+
+                <div class="specific-info">
+                    <p>School: Intern</p>
+                </div>
+            </div>
+        </section>
+
+
     </main>
-
-    <script src="./assets/js/script.js"></script>
+    
 </body>
-
-
 </html>

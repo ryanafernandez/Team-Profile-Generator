@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4% 12.5% 0 12.5%;
+    justify-content: space-around;
+}
+
+p {
+    margin: 0;
+    padding: 8px;
+}
+
+.employee-card {
+    margin: 8px;
+    padding: 0px;
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.5);
+    width: 320px;
+}
+
+.employee-card header {
+    margin: 0px;
+    padding: 20px;
+    background: #13293d;
+    color: #fff;
+}
+
+.employee-card .card-info {
+    padding: 16px;
+    background: greenyellow;
+}
+
+.employee-card .id, 
+.employee-card .email, 
+.employee-card .specific-info {
+    background: white;
+}
+
+.employee-card .employee-info {
+    margin: 16px;
+    padding: 0px;
+    background: green;
+}
+
+.employee-card .id {
+    margin: 0px;
+    padding: 0px;
+    border-style: solid;
+    border-width: 1px;
+}
+.employee-card .email {
+    margin: 0px;
+    padding: 0px;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+}
+
+.employee-card .specific-info {
+    margin: 0px;
+    padding: 0px;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+}
