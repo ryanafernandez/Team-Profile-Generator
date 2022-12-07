@@ -11,8 +11,6 @@ const filePath = './dist/index.html';
 const employees = [];
 const employeeCards = [];
 
-//create a function that runs inquirer prompt questions .then(() => inquirer.prompt().then) // chain promises
-
 // Prompts user for team manager's name, employee ID, email address, and office number
 function init() {
     inquirer.prompt(managerInfo).then((answers) => {
@@ -51,20 +49,17 @@ function menuPrompt() {
                 getInternInfo();
                 break;
             case 'I am finished':
-                finished();
+                generateRoster();
                 break;
             default:
-                finished();
+                generateRoster();
                 break;
         }
     });
 }
 
-// end point = loop employee array = convert into html
-// Iterates through all employees
-function finished() {
-    console.log("number of employees:", employees.length);
-    // generateHTML();
+// Iterates through all employees and generates card HTML. When finished, writes data with writeToFile
+function generateRoster() {
     
     employees.forEach(employee => {
 
@@ -99,6 +94,7 @@ function finished() {
     writeToFile(filePath, employeeData);
 }
 
+// Packages HTML file text with generateHTML and writes to ./dist/index.html
 function writeToFile(fileName, data) {
     let text = generateHTML(data);
 
