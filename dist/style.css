@@ -1,21 +1,44 @@
+:root {
+    --header-bg: #022B3A;
+    --header-text: #FFFFFF;
+    --body-bg: #bfdbf7;
+    --card-header-bg: #1F7A8C;
+    --card-header-text: #FFFFFF;
+    --card-bg: #E1E5F2;
+    --card-info-bg: #FFFFFF;
+    --card-border: #a8a8a8;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    background-color: var(--body-bg);
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
-    margin: 4% 12.5% 0 12.5%;
-    justify-content: space-around;
+    margin: 2% 12.5% 2% 12.5%;
+    justify-content: center;
 }
 
 p {
     margin: 0;
-    padding: 8px;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.dashboard-header {
+    padding: 56px;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+}
+
+.dashboard-header h1 {
+    font-size: 40px;
 }
 
 .employee-card {
@@ -23,7 +46,8 @@ p {
     padding: 0px;
     text-align: left;
     border-style: solid;
-    border-width: 1px;
+    border-width: 0.5px;
+    border-color: var(--card-border);
     box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.5);
     width: 320px;
 }
@@ -31,43 +55,38 @@ p {
 .employee-card header {
     margin: 0px;
     padding: 20px;
-    background: #13293d;
-    color: #fff;
+    background: var(--card-header-bg);
+    color: var(--card-header-text);
+}
+
+.employee-card header h2 {
+    font-size: 32px;
+}
+
+.employee-card header h3 {
+    font-size: 20px;
 }
 
 .employee-card .card-info {
     padding: 16px;
-    background: greenyellow;
+    background: var(--card-bg);
 }
 
 .employee-card .id, 
 .employee-card .email, 
 .employee-card .specific-info {
-    background: white;
-}
-
-.employee-card .employee-info {
-    margin: 16px;
+    margin: 0px;
     padding: 0px;
-    background: green;
+    border-style: solid;
+    border-color: var(--card-border);
+    background: var(--card-info-bg);
 }
 
 .employee-card .id {
-    margin: 0px;
-    padding: 0px;
-    border-style: solid;
     border-width: 1px;
 }
-.employee-card .email {
-    margin: 0px;
-    padding: 0px;
-    border-style: solid;
-    border-width: 0 1px 1px 1px;
-}
 
+.employee-card .email,
 .employee-card .specific-info {
-    margin: 0px;
-    padding: 0px;
-    border-style: solid;
     border-width: 0 1px 1px 1px;
 }

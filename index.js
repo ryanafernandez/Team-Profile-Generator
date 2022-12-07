@@ -5,6 +5,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const { managerInfo, engineerInfo, internInfo, menuInfo } = require('./src/questions');
 const generateHTML = require('./src/generateHTML');
+const generateCard = require('./src/generateCard');
 
 const filePath = './dist/index.html';
 const employees = [];
@@ -76,15 +77,15 @@ function finished() {
         switch (role) {
             case 'Manager':
                 let office = employee.getOfficeNumber();
-                employeeCard = generateHTML.generateCard(name, id, email, role, office);
+                employeeCard = generateCard(name, id, email, role, office);
                 break;
             case 'Engineer':
                 let github = employee.getGithub();
-                employeeCard = generateHTML.generateCard(name, id, email, role, github);
+                employeeCard = generateCard(name, id, email, role, github);
                 break;
             case 'Intern':
                 let school = employee.getSchool();
-                employeeCard = generateHTML.generateCard(name, id, email, role, school);
+                employeeCard = generateCard(name, id, email, role, school);
                 break;
             default:
                 throw(console.error("No role found"));
@@ -99,7 +100,7 @@ function finished() {
 }
 
 function writeToFile(fileName, data) {
-    let text = generateHTML.generateFileText(data);
+    let text = generateHTML(data);
 
     fs.writeFile(fileName, text, () => {
         console.log('Pizza is out the oven!');

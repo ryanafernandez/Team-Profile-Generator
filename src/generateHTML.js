@@ -1,47 +1,4 @@
-function generateCard(name, id, email, role, roleInfoData) {
-
-    let roleInfo;
-
-    switch (role) {
-        case 'Manager':
-            roleInfo = 'Office Number';
-            break;
-        case 'Engineer':
-            roleInfo = 'GitHub';
-            break;
-        case 'Intern':
-            roleInfo = 'School'
-            break;
-        default:
-            console.error("Role not found");
-            return 0;
-    }
-
-return `
-        <section class="employee-card">
-            <header class="card-header">
-                <h2>${name}</h2>
-                <h3>${role}</h3>
-            </header>
-
-            <div class="card-info">
-                <div class="id">
-                    <p>ID: ${id}</p>
-                </div>
-
-                <div class="email">
-                    <p>Email: ${email}</p>
-                </div>
-
-                <div class="specific-info">
-                    <p>${roleInfo}: ${roleInfoData}</p>
-                </div>
-            </div>
-        </section>
-`
-}
-
-function generateFileText(cardData) {
+function generateHTML(cardData) {
     return `<!DOCTYPE html>
 <html lang="en">
 
@@ -50,11 +7,20 @@ function generateFileText(cardData) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css" />
+
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" 
+    /> 
+    
     <title>My Team</title>
 </head>
 
 <body>
-    <header class="dashboard-header bg-dark text-light text-center p-2">
+    <header class="dashboard-header text-center">
         <h1>My Team</h1>
     </header>
 
@@ -67,7 +33,4 @@ function generateFileText(cardData) {
 `;
 }
 
-module.exports = { 
-    generateFileText,
-    generateCard
-};
+module.exports = generateHTML;
