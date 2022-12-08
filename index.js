@@ -100,7 +100,7 @@ function writeToFile(fileName, data) {
 
     fs.writeFile(fileName, text, () => {
         console.log('Pizza is out the oven!');
-        console.log('Your HTML file can be found at `./dist/index.html`');
+        console.log('Your Team Roster file can be found at `./dist/index.html`');
     })
 }
 
